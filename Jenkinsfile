@@ -20,8 +20,8 @@ pipeline {
                 }
             }
         }
-    }
-     stage('Push to Docker Hub') {
+    
+    stage('Push to Docker Hub') {
             steps {
                 script {
                     // Log in to Docker Hub
@@ -34,7 +34,7 @@ pipeline {
                 }
             }
      }
-
+    }
     post {
         always {
             // Clean up workspace after the build
