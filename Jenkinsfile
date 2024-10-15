@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build the Docker image
-                    def appImage = docker.build("handleMultipleSessions:${env.BUILD_ID}")
+                    def appImage = docker.build("handlemultiplesessions:${env.BUILD_ID}")
                 }
             }
         }
