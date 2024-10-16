@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_HUB_CREDENTIALS = credentials('dockercred') // Assuming you have stored Docker Hub credentials in Jenkins
+        DOCKER_HUB_CREDENTIALS = 'dockercred' // Assuming you have stored Docker Hub credentials in Jenkins
         DOCKER_HUB_REPO = 'awsakash/nodebakcend' // Replace with your Docker Hub repo
     }
     stages {
