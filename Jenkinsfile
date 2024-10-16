@@ -25,7 +25,7 @@ pipeline {
             steps {
                 script {
                     // Log in to Docker Hub
-                    docker.withRegistry('https://index.docker.io/v1/', 'DOCKER_HUB_CREDENTIALS') {
+                    docker.withRegistry('https://index.docker.io/v1/', DOCKER_HUB_CREDENTIALS) {
                         // Push the image to Docker Hub
                         def appImage = docker.image("${DOCKER_HUB_REPO}:${env.BUILD_ID}")
                         appImage.push() // Push the built image
